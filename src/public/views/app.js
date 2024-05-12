@@ -1,0 +1,27 @@
+import DrawerInitiator from '../utils/drawer-initiator';
+
+class App {
+  constructor({
+    button, drawer, content, hero,
+  }) {
+    this._button = button;
+    this._drawer = drawer;
+    this._content = content;
+    this._hero = hero;
+
+    this._initialAppShell();
+  }
+
+  _initialAppShell() {
+    DrawerInitiator.init({
+      button: this._button,
+      drawer: this._drawer,
+      content: this._content,
+      hero: this._hero,
+    });
+
+    // kita bisa menginisiasikan komponen lain bila ada
+  }
+}
+
+export default App;
